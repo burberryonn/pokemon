@@ -1,17 +1,21 @@
 const pokemon = document.getElementById('pikachu')
-let score = document.getElementById('bank')
+const score = document.getElementById('bank')
 let bank = 0
 let click = 1
 const buy = document.getElementsByTagName('button')
 let progress = 0
 const progressBar = document.querySelector('.progress-bar')
-let level = 0
+let level = 1
+const levelText = document.querySelector('.progress-container>p')
 
 pokemon.addEventListener('click', () => {
     bank += click
     score.textContent = bank
-    progress+=0.5
-    progressBar.style.width = progress + '%'
+    if(progress<=100){
+        progress+=0.5
+        progressBar.style.width = progress + '%'
+        levelUp()
+    }
 })
 
 buy[0].addEventListener('click', () => {
@@ -51,9 +55,9 @@ function autoClick(){
 
 function autoClickTen(){
     setInterval(() => {
-        bank+=10
+        bank+=1
         score.textContent = bank
-    }, 1000)
+    }, 100)
 }
 
 function clickPlusOne(){
@@ -63,3 +67,34 @@ function clickPlusOne(){
 function clickPlusFive(){
     click += 5
 }
+
+function levelUp(){
+    if(progress === 100){
+        if(level === 1)level++
+        switch (level) {
+            case 2:
+                pokemon.style.backgroundImage = "url('./img/Pikachu_baby.png')"
+                progress = 0
+                level++
+                levelText.textContent = 'Уровень 2'
+                break;
+            case 3:
+                pokemon.style.backgroundImage = "url('./img/Pikachu_middle.png')"
+                progress = 0
+                level++
+                levelText.textContent = 'Уровень 3'
+                break;
+            case 4:
+                pokemon.style.backgroundImage = "url('./img/Pikachu_middle.png')"
+                progress = 0
+                level++
+                levelText.textContent = 'Уровень 4'
+                break;
+        
+            default:
+                levelText.textContent = 'Завершено'
+                break;
+        }
+    }
+}
+

@@ -76,11 +76,7 @@
     position: absolute;
     top: 250px;
     left: 400px;
-<<<<<<< HEAD
-    
-=======
    
->>>>>>> 317ac35 (asd)
 }
 
 #pikachu {
@@ -98,15 +94,8 @@
     
 }
 
-<<<<<<< HEAD
-#pikachu:hover{ 
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-delay: 1s;
-}
 
-=======
->>>>>>> 317ac35 (asd)
+
 #pikachu:active{
     scale: 0.92;
     transition-duration: 0.1s;

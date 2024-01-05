@@ -3,10 +3,15 @@ let score = document.getElementById('bank')
 let bank = 0
 let click = 1
 const buy = document.getElementsByTagName('button')
+let progress = 0
+const progressBar = document.querySelector('.progress-bar')
+let level = 0
 
 pokemon.addEventListener('click', () => {
     bank += click
     score.textContent = bank
+    progress+=0.5
+    progressBar.style.width = progress + '%'
 })
 
 buy[0].addEventListener('click', () => {

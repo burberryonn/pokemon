@@ -10,23 +10,31 @@ pokemon.addEventListener('click', () => {
 })
 
 buy[0].addEventListener('click', () => {
+    if(bank<100)return;
     bank -= 100
     autoClick()
+    score.textContent = bank
 })
 
 buy[1].addEventListener('click', () => {
+    if(bank<50)return;
     bank-=50
     clickPlusOne()
+    score.textContent = bank
 })
 
 buy[2].addEventListener('click', () => {
+    if(bank<1000)return;
     bank-=1000
     autoClickTen()
+    score.textContent = bank
 })
 
 buy[3].addEventListener('click', () => {
+    if(bank<1500)return;
     bank-=1500
     clickPlusFive()
+    score.textContent = bank
 })
 
 function autoClick(){

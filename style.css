@@ -38,7 +38,7 @@ body{
     position: absolute;
     top: 250px;
     left: 400px;
-    /* position: fixed; */
+    
 }
 
 #pikachu {
@@ -56,22 +56,18 @@ body{
     
     
 }
-#pikachu:hover{
-    
+
+#pikachu:hover{ 
     animation-duration: 1s;
     animation-timing-function: ease;
     animation-delay: 1s;
-   
-
 }
+
 #pikachu:active{
     scale: 0.92;
     transition-duration: 0.1s;
     
 }
-
-
-
 
 @keyframes rotation{
     0% {
@@ -148,5 +144,4 @@ li{
 
 .game-list-block button:hover{
     scale: 0.98;
-    
 }

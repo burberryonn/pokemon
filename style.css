@@ -4,21 +4,59 @@
 
 }
 
-body{
-    
-    background-image: url(./img//background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
- 
+.home-background{
+    width: 100%;
+    height: 959px;
+    overflow: hidden;
+    position: absolute;
+}
+
+.home-background::after{
+   content: "";
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,1);
+   animation: mask 0.5s forwards;
 
 }
 
+.home-background img {
+    width: 100%;
+    height: 959px;
+    overflow: hidden;
+    position: relative;
+    animation: mask-img 0.5s reverse;
+    
+    
+}
+
+@keyframes mask-img{
+    0% {
+        scale: 1;
+    }
+
+    100%{
+        scale: 1.5;
+    }
+}
+
+@keyframes mask{
+    100% {
+        background-color: rgba(0,0,0,0.5);
+    }
+}
 
 
 .score{
     width: 200px;
     height: 60px;
     position: relative;
+    background-color: blue;
+    position: absolute;
     top: 100px;
     left: 530px;
     text-align: center;
@@ -38,7 +76,11 @@ body{
     position: absolute;
     top: 250px;
     left: 400px;
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> 317ac35 (asd)
 }
 
 #pikachu {
@@ -56,12 +98,15 @@ body{
     
 }
 
+<<<<<<< HEAD
 #pikachu:hover{ 
     animation-duration: 1s;
     animation-timing-function: ease;
     animation-delay: 1s;
 }
 
+=======
+>>>>>>> 317ac35 (asd)
 #pikachu:active{
     scale: 0.92;
     transition-duration: 0.1s;
@@ -88,17 +133,25 @@ li{
 .game-list{
     width: 30vw;
     height: 100vh;
+    width: 472px;
+    height: 800px;
+    /* background-image: url(./img/pokemon\ background.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
     position: absolute;
     left: 65%;
     display: block;
     overflow: auto;
+
+    
+   
 }
 
 .game-list:hover{
 
-    -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    /* -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
     -moz-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
-    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset; */
 
 }
 
@@ -113,7 +166,8 @@ li{
 }
 
 
-.game-list-block img{
+
+.icons{
     width: 60px;
     height: 60px;
     position: absolute;

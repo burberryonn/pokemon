@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .home-background{
@@ -55,20 +55,16 @@
     width: 200px;
     height: 60px;
     position: relative;
-    background-color: blue;
     position: absolute;
     top: 100px;
     left: 530px;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     font-weight: 700;
     font-size: 28px;
     
 }
 
-.score h1{
-    color: black;
-}
 
 .pikachu-box{
     width: 500px;
@@ -140,35 +136,38 @@ li{
 }
 
 .game-list-block{
-    width: 60%;
+    width: 90%;
     height: 20%;
     border: 1px solid black;
     background-color: bisque;
     display: block;
     margin-top: 5%;
     margin-left: 30px;
+    
 }
 
 
 
-.icons{
+/* .icons{
     width: 60px;
     height: 60px;
     position: absolute;
     margin-left: 340px;
     margin-top: 130px;
     z-index: 100;
-}
+} */
 
 .game-list-block p{
     position: absolute;
     font-size: 26px;
     color: black;
-    margin-left: 10px;
+    margin-left: 23%;
     margin-top: 50px;
     text-wrap: wrap;
+    text-align: center;
     
 }
+
 
 .game-list-block button{
     display: block;
@@ -179,22 +178,26 @@ li{
     
 }
 
-.game-list-block button:hover{
+/* .game-list-block button:hover{
     scale: 0.98;
-}
+} */
 
 .progress-container{
     width: 100%;
-    height: 8px;
+    height: 14px;
     background: #ccc;
 }
 
 .progress-container>p{
-    color: black;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.689);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 30px;
 }
 
 .progress-bar{
     width: 0%;
-    height: 8px;
-    background: rgb(228, 224, 23);
+    height: 14px;
+    background: rgba(228, 225, 23, 0.901);
 }
